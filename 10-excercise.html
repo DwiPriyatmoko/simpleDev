@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Exercise 10</title>
+	<link rel="stylesheet" href="style/10-excercise.css">
+</head>
+
+<body>
+
+	<!-- button toggle -->
+	<button id="js-button1" class="toggle-button" onclick="toggleButton('js-button1')">Gaming</button>
+	<button id="js-button2" class="toggle-button" onclick="toggleButton('js-button2')">Music</button>
+	<button id="js-button3" class="toggle-button" onclick="toggleButton('js-button3')">Tech</button>
+
+	<script>
+		// Use const for constant values (e.g., button IDs)
+		const buttonIds = ['js-button1', 'js-button2', 'js-button3'];
+
+		// Use let for variables that can be reassigned (e.g., activeButtons)
+		let activeButtons = [];
+
+		function toggleButton(buttonId) {
+			let button = document.getElementById(buttonId);
+
+			// Toggle the 'active' class for the clicked button
+			button.classList.toggle('active');
+
+			// Check if the button is active and update the activeButtons array
+			if (button.classList.contains('active')) {
+				activeButtons.push(button);
+			} else {
+				activeButtons = activeButtons.filter(id => id !== button);
+			}
+		}
+	</script>
+</body>
+
+</html>

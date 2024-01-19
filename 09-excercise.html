@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM Exercise</title>
+</head>
+
+<body>
+	<!-- <button>9a</button>
+	<button class="js-button-9b">9b</button> -->
+
+	<!-- <button class="js-heads" onclick="
+		document.querySelector('.js-choice').innerHTML = 'You chose: head'
+	">heads</button>
+
+	<button class="js-tails" onclick="
+		document.querySelector('.js-choice').innerHTML = 'You chose: tails'
+	">tails</button>
+	<p class="js-choice"></p> -->
+
+	<input placeholder="Name" class="js-name-input" onkeydown="inputKeydown();">
+	<input placeholder="Type something" class="js-input" onkeyup="
+		const inputElement = document.querySelector('.js-input');
+		document.querySelector('.js-message')
+			.innerHTML = inputElement.value;
+	">
+
+	<button onclick="buttonSubmit();">Submit</button>
+
+	<p class="js-message"></p>
+
+	<script>
+		function inputKeydown() {
+			if (event.key === 'Enter') {
+				// Optional: instead of duplicating this code,
+				// you could also put it in a function.
+				const inputElement = document.querySelector('.js-name-input');
+				document.querySelector('.js-message')
+					.innerHTML = `Your name is: ${inputElement.value}`;
+			}
+		}
+
+		function buttonSubmit() {
+			const inputElement = document.querySelector('.js-name-input');
+			document.querySelector('.js-message')
+				.innerHTML = `Your name is: ${inputElement.value}`;
+		}
+
+		// console.log(document.querySelector('button'));
+		// document.querySelector('.js-button-9b').innerHTML = '9b done';
+	</script>
+</body>
+
+</html>

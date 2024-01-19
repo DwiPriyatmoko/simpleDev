@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercise 10 - 2</title>
+	<link rel="stylesheet" href="style/10-excercise.css">
+</head>
+
+<body>
+
+	<button id="button1" class="toggle-button" onclick="toggleButton('button1')">Button 1</button>
+	<button id="button2" class="toggle-button" onclick="toggleButton('button2')">Button 2</button>
+	<button id="button3" class="toggle-button" onclick="toggleButton('button3')">Button 3</button>
+
+	<script>
+		// Use const for constant values (e.g., buttonIds)
+		const buttonIds = ['button1', 'button2', 'button3'];
+
+		function toggleButton(buttonId) {
+			// Remove the 'active' class from all buttons
+			buttonIds.forEach(id => {
+				const otherButton = document.getElementById(id);
+				otherButton.classList.remove('active');
+			});
+
+			// Toggle the 'active' class for the clicked button
+			let button = document.getElementById(buttonId);
+			button.classList.toggle('active');
+		}
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hour</title>
+</head>
+
+<body>
+	<script>
+		// let hour = '13';
+		// let name = 'origintypes';
+
+		// if (hour >= 6 && hour < 12) {
+		// 	hour = `Good morning ${name}`;
+		// } else if (hour >= 13 && hour < 17) {
+		// 	hour = `Good afternoon ${name}`;
+		// } else {
+		// 	hour = `Good Night ${name}`;
+		// }
+		// console.log(hour);
+
+		let hour = 10;
+		let name = 'Origintypes';
+
+		hour = (hour >= 6 && hour <= 12) ? `Good Morning ${name}` : (hour >= 13 && hour <= 17) ? `Good Afternoon ${name}` : `Good night ${name}`;
+		console.log(hour);
+
+		// && has a higher priority than || so for
+		// this to work correctly, we need to add
+		// brackets () around the || check to make
+		// sure that it gets done first.
+
+
+		// const age = 5;
+		// const isHoliday = true;
+
+		// if ((age <= 6 || age >= 65) && !isHoliday) {
+		// 	console.log('Discount');
+		// } else {
+		// 	console.log('No discount');
+		// }
+
+		// const age = 75;
+		// const isHoliday = 0;
+
+		// const result = ((age <= 6 || age >= 65) && !isHoliday) ? 'Discount' : 'No Discount';
+
+		// console.log(result);
+
+		const license = 18;
+
+		const result = (license >= 16) ? 'You can drive' : (license >= 14) ? 'Almost there' : 'You can not drive';
+
+		console.log(result);
+
+	</script>
+</body>
+
+</html>
